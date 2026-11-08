@@ -5,6 +5,7 @@ import process from 'node:process'
 
 import { add, diff, doctor, init, status, update } from '../lib/commands.mjs'
 import { color, log } from '../lib/terminal.mjs'
+import { EDITORS } from '../lib/vscode.mjs'
 
 const VERSION = JSON.parse(
   fs.readFileSync(new URL('../package.json', import.meta.url), 'utf8'),
@@ -33,6 +34,8 @@ ${color.bold('Options')}
   --yes, -y               Keep local changes without prompting
   --force, -f             Replace existing/modified files without prompting
   --verbose               Show per-file details
+  --editor <name>         Editor CLI for the SCSS helper: ${EDITORS.join(', ')}
+  --no-vscode             Skip .vscode setup and the SCSS helper install
   --no-color              Disable ANSI colors
   --color                 Force ANSI colors
   --version, -V           Print the CLI version
@@ -58,11 +61,12 @@ function parseArgs(argv) {
     else if (arg === '--dry-run' || arg === '-n') flags.dryRun = true
     else if (arg === '--overwrite') flags.overwrite = true
     else if (arg === '--verbose') flags.verbose = true
+    else if (arg === '--no-vscode') flags.vscode = false
     else if (arg === '--no-color') flags.color = false
     else if (arg === '--color') flags.color = true
     else if (arg === '--help' || arg === '-h') flags.help = true
     else if (arg === '--version' || arg === '-V') flags.version = true
-    else if (arg === '--registry' || arg === '--cwd') {
+    else if (arg === '--registry' || arg === '--cwd' || arg === '--editor') {
       const value = argv[index + 1]
       if (!value || value.startsWith('-')) {
         throw new Error(`Missing value for ${arg}.`)

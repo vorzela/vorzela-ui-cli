@@ -4,10 +4,10 @@ Install Vorzela UI components from the registry, shadcn-style.
 
 ```bash
 # global
-npm install -g github:vorzela/vorzela-ui-cli#v1.0.4
+npm install -g github:vorzela/vorzela-ui-cli#v1.0.5
 
 # or per project
-npm install -D github:vorzela/vorzela-ui-cli#v1.0.4
+npm install -D github:vorzela/vorzela-ui-cli#v1.0.5
 npx vorzela-ui add button input card
 ```
 
@@ -33,10 +33,16 @@ vorzela-ui doctor
   output is piped. Use `--no-color`, `--color`, or `NO_COLOR` to control it.
 - Errors include the registry URL, file path, package manager command, or a
   component-name suggestion, and the command exits non-zero.
+- `init` also prepares `.vscode/`: it adds SCSS file associations, recommends the
+  helper extension, writes a `vzuse` snippet, and installs the bundled
+  `vorzela-ui-scss` VSIX into the editor CLI it detects (`code`, `cursor`,
+  `windsurf`, or `codium`). New empty `.scss` files automatically get the
+  correct `@use '...' as vz;` import. Use `--editor <name>` to choose an editor
+  or `--no-vscode` to skip this step.
 
 Flags: `--registry <url|path>`, `--cwd <dir>`, `--dry-run`/`-n`,
-`--overwrite`, `--yes`/`-y`, `--force`/`-f`, `--verbose`, `--no-color`,
-`--color`, `--version`/`-V`, `--help`/`-h`.
+`--overwrite`, `--yes`/`-y`, `--force`/`-f`, `--verbose`, `--editor <name>`,
+`--no-vscode`, `--no-color`, `--color`, `--version`/`-V`, `--help`/`-h`.
 
 Default registry:
 `https://raw.githubusercontent.com/vorzela/vorzela-ui/v1.0.2/registry`

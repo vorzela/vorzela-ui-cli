@@ -1,0 +1,34 @@
+{
+  "name": "vorzela-ui-scss",
+  "displayName": "Vorzela UI SCSS",
+  "description": "Adds @use '...' as vz; to newly created SCSS files in Vorzela UI projects.",
+  "version": "1.0.0",
+  "publisher": "vorzela",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "scss",
+    "sass",
+    "vorzela",
+    "styles"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/vorzela.json"
+  ],
+  "main": "./extension.js",
+  "extensionKind": [
+    "workspace"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false,
+      "description": "Vorzela UI SCSS writes the import into newly created files."
+    }
+  },
+  "contributes": {}
+}

@@ -1,6 +1,6 @@
 {
   "name": "@vorzela/cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
   "type": "module",
   "description": "Install Vorzela UI components from the registry, shadcn-style.",
@@ -9,7 +9,8 @@
   },
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "vscode"
   ],
   "repository": {
     "type": "git",
