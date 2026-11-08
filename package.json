@@ -1,6 +1,6 @@
 {
   "name": "@vorzela/cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "type": "module",
   "description": "Install Vorzela UI components from the registry, shadcn-style.",
