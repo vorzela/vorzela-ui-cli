@@ -4,10 +4,10 @@ Install Vorzela UI components from the registry, shadcn-style.
 
 ```bash
 # global
-npm install -g github:vorzela/vorzela-ui-cli#v1.0.3
+npm install -g github:vorzela/vorzela-ui-cli#v1.0.4
 
 # or per project
-npm install -D github:vorzela/vorzela-ui-cli#v1.0.3
+npm install -D github:vorzela/vorzela-ui-cli#v1.0.4
 npx vorzela-ui add button input card
 ```
 
