@@ -1,0 +1,25 @@
+{
+  "name": "@vorzela/cli",
+  "version": "1.0.2",
+  "private": true,
+  "type": "module",
+  "description": "Install Vorzela UI components from the registry, shadcn-style.",
+  "bin": {
+    "vorzela-ui": "./bin/vorzela-ui.mjs"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vorzela/vorzela-ui-cli.git"
+  },
+  "homepage": "https://github.com/vorzela/vorzela-ui-cli",
+  "bugs": {
+    "url": "https://github.com/vorzela/vorzela-ui-cli/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
